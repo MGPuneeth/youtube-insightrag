@@ -1,0 +1,23 @@
+[project]
+name = "youtube-playlist-revision-assistant"
+version = "0.1.0"
+description = "A timestamp-aware YouTube playlist RAG assistant using Qdrant and Groq."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "av<19",
+    "faster-whisper>=1.1.0",
+    "fastembed>=0.5.0",
+    "groq>=0.20.0",
+    "python-dotenv>=1.0.1",
+    "qdrant-client>=1.14.0",
+    "streamlit>=1.40.0",
+    "yt-dlp>=2025.1.15",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
